@@ -1,0 +1,9 @@
+# Create .gitignore in your DSA folder
+echo "*.exe
+*.o
+*.out
+output/
+.vscode/" > .gitignore
+git add .gitignore
+git commit -m "add gitignore - remove binaries"
+git push origin main
