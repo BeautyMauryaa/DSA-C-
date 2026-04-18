@@ -199,3 +199,47 @@ int main()
 }
 
 
+
+//1.Write a function that swaps two numbers using pass by reference
+
+
+void swap(int &a,int &b){
+  int temp=a;
+  a=b;
+  b=temp;
+}
+
+
+
+//2.Write a function that returns both sum AND product of two numbers using reference params
+void sumproduct(int a,int b,int  &sum,int &product){
+  sum=a+b;
+  product=a*b;
+}
+
+//3.Write overloaded functions named area that: Takes 1 param → area of circle (πr²).Takes 2 params → area of rectangle (l×b)
+double area(double r) {
+    return 3.14 * r * r;  // πr²
+}
+
+// 🔹 Area of Rectangle (2 parameters)
+int area(int l, int b) {
+    return l * b;  // l × b
+}
+
+
+//Tower of Hanoi:
+//1. move disk 1 from source to destination
+//2. move disk n-1 from source to auxiliary rod
+//3. move disk 1 from source to destination
+//4. move disk n-1 from auxiliary rod to destination
+
+void towerOfHanoi(int n, char source, char auxiliary, char destination) {
+    if (n == 1) {
+        cout << "Move disk 1 from " << source << " to " << destination << endl;
+        return;
+    }
+    towerOfHanoi(n - 1, source, destination, auxiliary);
+    cout << "Move disk " << n << " from " << source << " to " << destination << endl;
+    towerOfHanoi(n - 1, auxiliary, source, destination);
+}
