@@ -90,24 +90,6 @@ int fib(int n){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function: reusable block of code that perform a specific task and can be called multiple times in a program.
 // recursion: functions that call themselves directly or indirectly to solve a problem by breaking it down into smaller parts and solving each part recursively.
 
@@ -243,3 +225,42 @@ void towerOfHanoi(int n, char source, char auxiliary, char destination) {
     cout << "Move disk " << n << " from " << source << " to " << destination << endl;
     towerOfHanoi(n - 1, auxiliary, source, destination);
 }
+
+
+
+// //Fibonacci of N:
+//without loop:
+int fib(int n){
+  if(n<=1) return n;
+  return fib(n-1)+fib(n-2);
+}
+
+//with loop:
+int fib(int n){
+  if(n<=1) return n;
+  int a=0,b=1;
+  for(int i=2;i<=n;i++){
+    int next=a+b;
+    a=b;
+    b=next;
+  }
+  return b;
+}
+
+
+//reverse a array by ref
+// ..class Solution{
+// public:
+//     void reverse(vector<int>& arr){
+//    int start=0;
+//    int end=arr.size()-1;~
+// while(start<end){
+//     int temp=arr[start];
+//     arr[start]=arr[end];
+//     arr[end]=temp;
+
+//     start++;
+//     end--;
+// }
+//     }
+// };
