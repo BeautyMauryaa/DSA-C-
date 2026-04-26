@@ -88,3 +88,6 @@ int main()
     cout << s2.name << " " << s2.age << " " << s2.marks << endl;
     return 0;
 }
+
+
+//class and struct- only diff is struct be default(public) and class by default(private) 
