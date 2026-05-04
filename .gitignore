@@ -1,6 +1,7 @@
-# Create .gitignore in your DSA folder
 echo "*.exe
 *.o
 *.out
 output/
-.vscode/" > .gitignore
+.vscode/
+mypart.md
+dsasyllabus.pdf" > .gitignore
