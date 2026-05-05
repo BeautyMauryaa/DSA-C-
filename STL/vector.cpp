@@ -1,50 +1,48 @@
-// vector: kind of array but with dynamic size
-// in normal array the size id fixed but in this the size is grow and shrink as per need
-// we include vector in header file like this -> #include <vector> 
-// vector<int> v; // this is a vector of integers
-// vector<int> v(5); // this is a vector of integers with 5 elements
+// it is kind of dynamic array(in the normal array the size is fixed but in this the size will grow and shrink on runtime as per need)
 
 
 
- #include <iostream>
-//#include <bits/stdc++.h>
-#include <vector>
-#include <algorithm>
+    //most used function vector: 
+    //push_back(add in the end) 
+    //pop_back(remove from end)
+    //size()-check the number of element present in vector
+    //empty()-check vector is empty or not
+    //v[i]/v.at(i)- access
+    //v.front()/v.back()- first and last
+    //v.begin()/v.end()-iterators
+    //v.clear()- delete
+    //v.erase(it)-specific position delete
+    //insert(it,x)-specific position insert(it(index),x(element))
+    //v.resize(n) -size change
+    //v.assign(n,x)
+
+
+// declaration:
+#include <iostream>
+#include <vector> //to use vector we have to include this in header file
 using namespace std;
 
-// int main(){
-//     vector<int> numb;
-//     numb.push_back(1);
-//     numb.push_back(4);
-//     numb.push_back(9);
-//     cout<<numb[0]<<" "<<numb[1]<<" "<<numb[2]<<endl;
-//     return 0;
-// }
+void aboutvector()
+{
+    // there aremany way to declare a vector
+    vector<int> v;        // empty vector
+    vector<int> v2(5);    // size is 5 but default value is 0
+    vector<int> v3(5, 8); // size 5 with default value 8
+    vector<int> v4={1,2,3,4}; //initialized
+    vector<vector<int>> v5; //2d vector matrix
 
-void aboutvector(){
 
-    vector<int> v; // empty vector
-    vector<int> v1(5); // vector of size 5
-    vector<int> v2(5, 2); // vector of size 5 with all elements initialized to 2
+    //traversal:
+    for(int i=0;i<v4.size();i++)//by using index
+    cout<<v4[i];
 
-    vector<int> v3{1, 2, 3, 4, 5}; // vector of size 5 with elements 1, 2, 3, 4, 5
-    vector<int> v4(v3); // vector of size 5 with elements 1, 2, 3, 4, 5
+    // //range based(preferred)
+    // for(int x:v) cout<<x;
 
-    vector<int> v5(v3.begin(), v3.end()); // vector of size 5 with elements 1, 2, 3, 4, 5
+    //iterator
+    for(auto it =v4.begin(); it!=v4.end();it++)
+    cout<<*it;
 
-    vector<int> v6(v3, v3 + 3); // vector of size 3 with elements 1, 2, 3
 
-    vector<int> v7(v3.begin() + 1, v3.end() - 1); // vector of size 3 with elements 2, 3, 4
 
-    vector<int> v8 = v3; // vector of size 5 with elements 5, 4, 3, 2, 1
-    std::reverse(v8.begin(), v8.end());
-
-    vector<int> v9(v3.rbegin() + 1, v3.rend() - 1); // vector of size 3 with elements 4, 3, 2
-
-    vector<int> v10(v3.begin(), v3.end()); // vector of size 5 with elements 1, 2, 3, 4, 5
-
-}
-int main(){
-    aboutvector();
-    return 0;
 }
