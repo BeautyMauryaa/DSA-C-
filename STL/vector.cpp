@@ -133,6 +133,22 @@ void seclargest()
     cout << "second largest: " << seclarg << endl;
 }
 
+
+
+//leetcode 485: maxcount Consecutive of ones:
+
+int Consecutiveones(vector<int> nums){
+    int maxcount=0,count=0;
+    for(int num:nums){
+        if(num==1){
+            count++;
+        }else{
+            count=0;
+        }
+        maxcount=max(maxcount,count);
+    }
+    return maxcount;
+}
 int main()
 {
     aboutvector();
@@ -161,5 +177,12 @@ int main()
 
 
     seclargest();
+
+    //findMaxConsecutiveOnes:
+    cout<<"max count Consecutive of ones: "<<endl;
+    vector<int> nums={1,5,6,0,0,0,1,1};
+   int result= Consecutiveones(nums);
+   cout<<result;
+
     return 0;
 }
