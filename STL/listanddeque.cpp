@@ -107,6 +107,27 @@ void abtdeque(){
     for(int x:dq) cout<<x<<" ";
 }
 
+
+
+//question:
+
+void quest(){
+    list<int> li={5,3,8,1,9,2};
+    li.sort();
+    li.reverse();
+    for(int x:li) cout<<x<<" ";
+
+    cout<<endl;
+    cout<<"deque: ";
+    deque<int> dq;
+    dq.push_front(10);
+     dq.push_front(13);
+      dq.push_back(16);
+       dq.push_back(19);
+       for(int x:dq) cout<<x<<" ";
+
+
+}
 int main()
 {
     aboutlist();
@@ -114,6 +135,13 @@ int main()
     listfunction();
 
     abtdeque();
+
+    cout<<endl;
+    cout<<"question: "<<endl;
+    quest();
+
+
+
     return 0;
 }
 
@@ -122,5 +150,5 @@ int main()
 //vector vs list vs dequeu:
 //vector-fast access,slow front inser;(default choise)
 //list- slow acces,fast insert anywhere;(we use it when middle insert and delete are more)
-//deque: fast access and fat insert front/back (we use it in sliding window,bfs,frontand back operation);
+//deque: fast access and fast insert front/back (we use it in sliding window,bfs,frontand back operation);
 
