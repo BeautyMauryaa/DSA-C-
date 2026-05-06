@@ -4,6 +4,7 @@
 // noded connected
 // no random access like the linked list
 
+
 // #include<list>
 //  most used function vector:
 //  push_back(add in the end)
@@ -23,6 +24,7 @@
 
 #include <iostream>
 #include <list>
+#include <deque>
 using namespace std;
 
 void aboutlist()
@@ -79,10 +81,46 @@ void listfunction()
         cout << x << " ";
 }
 
+
+
+//deque:double ended queue(means we can add or remove element from both side(front and back))
+
+void abtdeque(){
+    deque<int> dq={1,2,3,5};
+    dq.push_front(9);
+    dq.push_back(10);
+    dq.push_front(4);
+
+    cout<<"Deque: ";
+    for(int x:dq) cout<<x<<" ";
+
+    //we can easily access the element
+    cout<<"Front: "<<dq.front();
+    cout<<"random element: "<<dq[4];//like the vector
+    cout<<"last : "<<dq.back();
+
+
+    dq.pop_front();
+    dq.pop_back();
+
+    cout<<"after removing element: ";
+    for(int x:dq) cout<<x<<" ";
+}
+
 int main()
 {
     aboutlist();
     cout << endl;
     listfunction();
+
+    abtdeque();
     return 0;
 }
+
+
+
+//vector vs list vs dequeu:
+//vector-fast access,slow front inser;(default choise)
+//list- slow acces,fast insert anywhere;(we use it when middle insert and delete are more)
+//deque: fast access and fat insert front/back (we use it in sliding window,bfs,frontand back operation);
+
