@@ -3,12 +3,10 @@
 // stack<int> st;
 //operation: push,pop,top,empty,size
 
-
 #include<iostream>
 #include<stack>
 #include<queue>
 using namespace std;
-
 void abtstack(){
     stack<int> st;
     st.push(10);
@@ -23,8 +21,6 @@ void abtstack(){
     //only top access allowed
 
 }
-
-
 //queue: FIFO(first in first out) 
 void abtqueue(){
     queue<int> q;
@@ -36,12 +32,9 @@ void abtqueue(){
     q.pop();
     cout<<q.front();//8
 }
-
 //stack-last removed first (top)
 //queue-first removed first(front)
 //by default both use deque
-
-
 int main(){
     abtstack();
     cout<<"queue: ";
