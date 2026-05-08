@@ -49,6 +49,15 @@ void multisetdemo(){
 
     for(int x:ms)
         cout<<x<<" ";
+
+
+        //cont
+        Cout<<"multiset count: ";
+        f) cout<<ms.count(10);
+
+        ..
+
+
 }
 
 
