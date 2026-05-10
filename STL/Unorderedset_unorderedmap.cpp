@@ -61,3 +61,10 @@ int main(){
 
 
 
+
+//use: 
+// when need sorted- map/set
+//when need fast loopup- unordered set/map
+//frequency count- unordered map
+//duplicate check- unordered set
+//range queries- set/map
