@@ -1,6 +1,8 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
+
+
 vector<int> twosum(vector<int> &nums, int target)
 {
     unordered_map<int, int> mp;
@@ -31,6 +33,23 @@ bool canConstruct(string ransomNote, string magazine)
     }
     return true;
 }
+
+
+bool palindrome(int x){
+    if(x<0){
+        return false;
+    }
+
+int real=x;
+long long rev=0;
+while(x>0){
+    int data=x%10;
+    rev=rev*10+digit;
+    x=x/10;
+}
+return real==rev;
+}
+
 
 int main()
 {
